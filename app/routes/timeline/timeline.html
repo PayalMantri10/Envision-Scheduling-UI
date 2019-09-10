@@ -1,0 +1,57 @@
+<!-- <div>
+   Hi
+   </div>
+   <daypilot-scheduler id="scheduler" daypilot-config="schedulerConfig" daypilot-events="schedulerConfig.events" ></daypilot-scheduler> -->
+<div id='scheduleTableOptions'>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:10vw">
+         {{selectedDepartment}}
+         <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li ng-repeat="dept in departments">{{dept}}</li>
+        </ul>
+    </div>
+    <div style="position:absolute; left:12vw">
+        <input type="date" class="form-control" placeholder="Text input" style="width:10vw"></div>
+    <div style="position:absolute; left:24vw"> <input type="email" placeholder="search" class="form-control form-control-underlined" style="width: 12vw">
+    </div>
+
+    <div style="position:absolute;right: 1vw;">
+        <button class="btn custom-button active-button">ADD NEW SCHEDULE</button>
+    </div>
+</div>
+<div id='scheduleTableSection'>
+    <table class="schedule-table">
+        <tr ng-repeat="x in data.values">
+            <td style="width:10vw">
+                <diV>
+                    {{x.name}}
+                    <div class="glyphicon glyphicon-option-vertical"></div>
+                </diV>
+            </td>
+            <td ng-show="x.events && x.events.length>0" style="width: 80vw">
+                <div class="main-timeline-section">
+                    <div class="conference-center-line"></div>
+                    <div class="conference-timeline-content">
+                        <div class="timeline-article " ng-repeat="y in range">
+                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" ng-style="{'background': y.isConfirmed ? 'red':'blueviolet'}" style="transform: translateY(-50%);position: absolute;top: 50%;">
+                                <div id="inner-circle">
+                                </div>
+                            </div>
+                            <div ng-show="!isAppointementScheduled(x.events, y)" class="meta-date"></div>
+                            <div class="content-date">
+                                <span>{{y}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="glyphicon glyphicon-chevron-right translateHalfHeight"></i>
+                </div>
+
+            </td>
+            <td ng-show="x.events==undefined || x.events.length==0" style="width: 80vw;height: 10vh;" class="stripedBackground">
+                WEEKOFF
+            </td>
+        </tr>
+    </table>
+</div>

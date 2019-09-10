@@ -1,0 +1,41 @@
+<div class="panel panel-default" style="width:70%; position: absolute; left:15%; top:30% ;height:40%">
+    <div class="panel-body">
+        <div class="row">
+            <button style='float:right; margin-right: 1%' type="button" class="close" aria-label="Close" ng-click="close()"><span
+                    aria-hidden="true">x</span></button>
+            <div class="col-xs-3"><img
+                    src="https://image.freepik.com/free-vector/happy-family-vector-illustration_97632-117.jpg"
+                    style="width: 90%"></div>
+            <div class="col-xs-9">
+                <div>Appointment Details</div>
+                <div style="color: #3CC9F9;font-size: 3vh;font-weight:bold">{{doctor.name}}</div>
+                <div class="subdetails details-container">
+                    <div>{{doctor.speciality}}</div>
+                    <div>{{doctor.experience}} years experience in overall</div>
+                </div>
+
+                <div class="row details-container">
+                    <div class="col-xs-3">
+                        <div>When</div>
+                        <div class="appointment-detail">{{appointment.date}}</div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div>Where</div>
+                        <div class="appointment-detail">{{appointment.place}}</div>
+                        <div class="appointment-detail">{{appointment.department}}</div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div>Assigned By</div>
+                        <div class="appointment-detail">{{appointment.assignedBy}}</div>
+                    </div>
+
+                </div>
+                <div class="row details-container">
+                    <button class="btn custom-button active-button">Edit</button>
+                    <button class="btn custom-button">Rescheduled</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
