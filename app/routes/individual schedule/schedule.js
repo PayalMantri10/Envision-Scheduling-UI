@@ -4,7 +4,7 @@ angular.module('app.schedule', [])
     templateUrl: 'routes/individual schedule/schedule.html',
     controller: 'Schedule',
     controllerAs: 'vm',
-    controller: function($scope) {
+    controller: function($scope, $rootRouter) {
         var vm = this;
 
 
@@ -46,6 +46,10 @@ angular.module('app.schedule', [])
             let first = curr.getDate() - curr.getDay() + i
             let day = moment(new Date(curr.setDate(first))).format('YYYY-MM-DD')
             $scope.week.push(day)
+        }
+
+        $scope.routeToDetail = function(name) {
+            $rootRouter.navigate(['/Dashboard'])
         }
 
         $scope.doctorSchedule = {

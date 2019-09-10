@@ -24,18 +24,18 @@
 <div id='scheduleTableSection' class="scroll">
     <table class="schedule-table ">
         <tr ng-repeat="x in data.values">
-            <td style="width:10vw">
-                <diV ng-click="routeToDetail(x.name)">
+            <td style="width:15vw; cursor: pointer;">
+                <diV ng-click="routeToIndividualSchedule(x.name)" style="position: relative; padding: 0 0 0 1vw;">
                     {{x.name}}
-                    <div class="glyphicon glyphicon-option-vertical"></div>
+                    <div class="glyphicon glyphicon-option-vertical" style="position: absolute;right:0.5vw; color:gray"></div>
                 </diV>
             </td>
-            <td ng-show="x.events && x.events.length>0" style="width: 80vw">
+            <td ng-show="x.events && x.events.length>0" style="width: 75vw; padding: 0 3vw;">
                 <div class="main-timeline-section">
                     <div class="conference-center-line"></div>
                     <div class="conference-timeline-content">
                         <div class="timeline-article " ng-repeat="y in range">
-                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" style="transform: translateY(-50%);position: absolute;top: 50%;background: red">
+                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" style="transform: translateY(-50%);position: absolute;top: 50%;background: red; cursor: pointer;" ng-click="routeToDetail(x.name)">
                                 <div id="inner-circle">
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                 </div>
 
             </td>
-            <td ng-show="x.events==undefined || x.events.length==0" style="width: 80vw;height: 10vh;" class="stripedBackground">
+            <td ng-show="x.events==undefined || x.events.length==0" style="width: 80vw;height: 10vh;text-align: center" class="stripedBackground">
                 WEEKOFF
             </td>
         </tr>

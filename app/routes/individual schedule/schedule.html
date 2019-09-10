@@ -1,9 +1,9 @@
-<div id='scheduleTableOptions'>
+<div style="position: absolute; top:17vh; left:10vw; width:80vw; height:8vh">
     <div>
         <button type="button" class="btn btn-default" ng-class='{"selectedButton":selectedTimeInterval=="Daily"}' ng-click='setTimeInterval("Daily")'>Daily</button>
         <button type="button" class="btn btn-default" ng-class='{"selectedButton":selectedTimeInterval=="Weekly"}' ng-click='setTimeInterval("Weekly")'>weekly</button>
     </div>
-    <div style="position:absolute;right: 1vw;">
+    <div style="position:absolute;right: 1vw;top:0">
         <button class="btn custom-button active-button">ADD NEW SCHEDULE</button>
     </div>
 </div>
@@ -28,7 +28,7 @@
                 <td style="width: 10vw;" ng-repeat="date in week">
                     <div style=" position: relative;width: 100%;height:100%;text-align: center" ng-class="{'stripedBackground': ($index==0 || $index==6)}">
 
-                        <div ng-show="isAppointementScheduled(doctorSchedule.events, x, date)" id="outer-circle" style="background:red;transform: translateY(-50%);position: absolute;top: 50%;left:40%">
+                        <div ng-show="isAppointementScheduled(doctorSchedule.events, x, date)" id="outer-circle" style="background:red;transform: translateY(-50%);position: absolute;top: 50%;left:40%" ng-click="routeToDetail(x.name)">
                             <div id="inner-circle">
                             </div>
                         </div>

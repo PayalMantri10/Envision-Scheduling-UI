@@ -152,9 +152,9 @@ a img {
 
 .timeline-article .content-date {
     position: absolute;
-    top: 59%;
-    left: -30px;
-    font-size: 18px;
+    top: 65%;
+    left: -15px;
+    font-size: 15px;
 }
 
 .timeline-article .meta-date {
@@ -224,6 +224,12 @@ a img {
 .schedule-table tr {
     background: #f0f3f5;
     height: 10vh;
+    border: 1px solid darkgray;
+}
+
+.schedule-table td {
+    height: 10vh;
+    border: 1px solid darkgray;
 }
 
 .form-control-underlined {
