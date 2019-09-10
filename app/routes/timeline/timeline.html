@@ -21,11 +21,11 @@
         <button class="btn custom-button active-button">ADD NEW SCHEDULE</button>
     </div>
 </div>
-<div id='scheduleTableSection'>
-    <table class="schedule-table">
+<div id='scheduleTableSection' class="scroll">
+    <table class="schedule-table ">
         <tr ng-repeat="x in data.values">
             <td style="width:10vw">
-                <diV>
+                <diV ng-click="routeToDetail(x.name)">
                     {{x.name}}
                     <div class="glyphicon glyphicon-option-vertical"></div>
                 </diV>
@@ -35,7 +35,7 @@
                     <div class="conference-center-line"></div>
                     <div class="conference-timeline-content">
                         <div class="timeline-article " ng-repeat="y in range">
-                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" ng-style="{'background': y.isConfirmed ? 'red':'blueviolet'}" style="transform: translateY(-50%);position: absolute;top: 50%;">
+                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" style="transform: translateY(-50%);position: absolute;top: 50%;background: red">
                                 <div id="inner-circle">
                                 </div>
                             </div>

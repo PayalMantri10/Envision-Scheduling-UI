@@ -223,7 +223,7 @@ a img {
 
 .schedule-table tr {
     background: #f0f3f5;
-    height: 80px;
+    height: 10vh;
 }
 
 .form-control-underlined {
@@ -241,7 +241,7 @@ a img {
 }
 
 .stripedBackground {
-    background: repeating-linear-gradient( 45deg, #f0f3f5, #f0f3f5 10px, lightgray 10px, lightgray 20px);
+    background: repeating-linear-gradient( 45deg, #f0f3f5, #f0f3f5 10px, lightgray 10px, lightgray 17px);
     color: grey;
     font-weight: bold;
 }
@@ -262,18 +262,18 @@ a img {
     overflow-y: scroll;
 }
 
-#scheduleTableSection::-webkit-scrollbar-track {
+.scroll::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     background-color: #F5F5F5;
 }
 
-#scheduleTableSection::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     width: 8px;
     background-color: #F5F5F5;
 }
 
-#scheduleTableSection::-webkit-scrollbar-thumb {
+.scroll::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #555;
@@ -283,4 +283,34 @@ a img {
     transform: translateY(-50%);
     top: 50%;
     position: absolute;
+}
+
+.selectedButton {
+    background-color: #3CC9F9;
+}
+
+#individualScheduleTableSection {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+    width: 80vw;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.schedule-table-individual {
+    width: "85vw";
+    max-height: "70vh";
+    margin: "2vw";
+    border: solid 1px gray;
+    border-collapse: collapse;
+}
+
+.schedule-table-individual tr,
+.schedule-table-individual td {
+    background: #f0f3f5;
+    height: 7vh;
+    border: solid 1px gray;
+    border-collapse: collapse;
+    text-align: center;
 }

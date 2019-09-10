@@ -1,6 +1,6 @@
 # angularjs-component-router
 
-An Angular 1.x example app using the component router and module component helper
+An Angular 1.x sample scheduling UI
 
 ## Installation
 

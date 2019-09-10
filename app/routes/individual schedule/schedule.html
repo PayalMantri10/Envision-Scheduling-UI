@@ -1,0 +1,43 @@
+<div id='scheduleTableOptions'>
+    <div>
+        <button type="button" class="btn btn-default" ng-class='{"selectedButton":selectedTimeInterval=="Daily"}' ng-click='setTimeInterval("Daily")'>Daily</button>
+        <button type="button" class="btn btn-default" ng-class='{"selectedButton":selectedTimeInterval=="Weekly"}' ng-click='setTimeInterval("Weekly")'>weekly</button>
+    </div>
+    <div style="position:absolute;right: 1vw;">
+        <button class="btn custom-button active-button">ADD NEW SCHEDULE</button>
+    </div>
+</div>
+<div class="alert alert-bar" style="position: absolute; top:25vh; left:10vw; width:80vw; height:8vh">
+    <div class="row" style="display:flex;justify-content: center; font-size: 20">
+
+        <div style="font-weight:bold; color: #3CC9F9">{{doctor.name}} - </div>
+        <div class="alert-bar-text"> {{doctor.speciality}}</div>
+    </div>
+</div>
+<div id='individualScheduleTableSection' class="scroll">
+    <table class="schedule-table-individual ">
+        <thead>
+            <tr>
+                <th t>TIME</th>
+                <th ng-repeat="date in week" style="text-align: center">{{date}}</th>
+            </tr>
+        </thead>
+        <div class="scroll">
+            <tr ng-repeat="x in range">
+                <td style="width: 10vw;">{{x}}</td>
+                <td style="width: 10vw;" ng-repeat="date in week">
+                    <div style=" position: relative;width: 100%;height:100%;text-align: center" ng-class="{'stripedBackground': ($index==0 || $index==6)}">
+
+                        <div ng-show="isAppointementScheduled(doctorSchedule.events, x, date)" id="outer-circle" style="background:red;transform: translateY(-50%);position: absolute;top: 50%;left:40%">
+                            <div id="inner-circle">
+                            </div>
+                        </div>
+                        <div ng-show="!isAppointementScheduled(doctorSchedule.events, x, date)" class="meta-date"></div>
+                        <div class="content-date">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </div>
+    </table>
+</div>
