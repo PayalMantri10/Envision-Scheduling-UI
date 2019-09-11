@@ -94,6 +94,10 @@ a img {
     */
 }
 
+.circleSelector:hover {
+    background: blueviolet;
+}
+
 #inner-circle {
     position: absolute;
     background: white;
@@ -241,9 +245,12 @@ a img {
 }
 
 .form-control::placeholder {
-    font-size: 0.95rem;
-    color: #aaa;
-    font-style: italic;
+    font-size: 1.5vh;
+    color: grey;
+}
+
+.form-control:focus {
+    box-shadow: none
 }
 
 .stripedBackground {
@@ -269,20 +276,20 @@ a img {
 }
 
 .scroll::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 1vh rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     background-color: #F5F5F5;
 }
 
 .scroll::-webkit-scrollbar {
-    width: 8px;
+    width: 1vh;
     background-color: #F5F5F5;
 }
 
 .scroll::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #555;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: grey;
 }
 
 .translateHalfHeight {
@@ -319,4 +326,8 @@ a img {
     border: solid 1px gray;
     border-collapse: collapse;
     text-align: center;
+}
+
+.selectedDayColumn {
+    background: white;
 }

@@ -9,12 +9,10 @@
          <span class="caret"></span>
       </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li ng-repeat="dept in departments">{{dept}}</li>
+            <li ng-repeat="dept in departments" ng-click="setDepartment(dept)">{{dept}}</li>
         </ul>
     </div>
-    <div style="position:absolute; left:12vw">
-        <input type="date" class="form-control" placeholder="Text input" style="width:10vw"></div>
-    <div style="position:absolute; left:24vw"> <input type="email" placeholder="search" class="form-control form-control-underlined" style="width: 12vw">
+    <div style="position:absolute; left:12vw"> <input type="text" placeholder="&#xe003; search" class="form-control form-control-underlined glyphicon" style="width: 12vw">
     </div>
 
     <div style="position:absolute;right: 1vw;">
@@ -35,7 +33,7 @@
                     <div class="conference-center-line"></div>
                     <div class="conference-timeline-content">
                         <div class="timeline-article " ng-repeat="y in range">
-                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" style="transform: translateY(-50%);position: absolute;top: 50%;background: red; cursor: pointer;" ng-click="routeToDetail(x.name)">
+                            <div ng-show="isAppointementScheduled(x.events, y)" id="outer-circle" class="circleSelector" style="transform: translateY(-50%);position: absolute;top: 50%;background: red; cursor: pointer;" ng-click="routeToDetail(x.name)">
                                 <div id="inner-circle">
                                 </div>
                             </div>
@@ -45,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <i class="glyphicon glyphicon-chevron-right translateHalfHeight"></i>
+                    <i class="glyphicon glyphicon-menu-right translateHalfHeight" style="color: gray"></i>
                 </div>
 
             </td>

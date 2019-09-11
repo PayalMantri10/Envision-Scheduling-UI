@@ -7,7 +7,7 @@ var app = angular.module('myApp', [
     'app.timeline',
     'app.about',
     'app.404',
-    'daypilot',
+    'app'
 ])
 
 app.value('$routerRootComponent', 'app');

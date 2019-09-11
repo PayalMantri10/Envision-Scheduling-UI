@@ -18,17 +18,17 @@
     <table class="schedule-table-individual ">
         <thead>
             <tr>
-                <th t>TIME</th>
-                <th ng-repeat="date in week" style="text-align: center">{{date}}</th>
+                <th>TIME</th>
+                <th ng-repeat="date in week" style="text-align: center" ng-class="{'appointment-detail': ($index==selectedDayIndex)}">{{date}}</th>
             </tr>
         </thead>
         <div class="scroll">
             <tr ng-repeat="x in range">
                 <td style="width: 10vw;">{{x}}</td>
                 <td style="width: 10vw;" ng-repeat="date in week">
-                    <div style=" position: relative;width: 100%;height:100%;text-align: center" ng-class="{'stripedBackground': ($index==0 || $index==6)}">
+                    <div style=" position: relative;width: 100%;height:100%;text-align: center" ng-class="{'stripedBackground': ($index==0 || $index==6), 'selectedDayColumn':$index==selectedDayIndex}">
 
-                        <div ng-show="isAppointementScheduled(doctorSchedule.events, x, date)" id="outer-circle" style="background:red;transform: translateY(-50%);position: absolute;top: 50%;left:40%" ng-click="routeToDetail(x.name)">
+                        <div ng-show="isAppointementScheduled(doctorSchedule.events, x, date)" id="outer-circle" style="background:red;transform: translateY(-50%);position: absolute;top: 50%;left:40%;cursor: pointer;" ng-click="routeToDetail(x.name)">
                             <div id="inner-circle">
                             </div>
                         </div>

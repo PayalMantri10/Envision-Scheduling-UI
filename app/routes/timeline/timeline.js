@@ -4,7 +4,7 @@ angular.module('app.timeline', [])
     templateUrl: 'routes/timeline/timeline.html',
     controller: 'Timeline',
     controllerAs: 'vm',
-    controller: function($scope, $rootRouter) {
+    controller: function($scope, $rootRouter, doctorSchedule) {
         var vm = this;
 
         let items = [];
@@ -47,123 +47,9 @@ angular.module('app.timeline', [])
         $scope.routeToIndividualSchedule = function(name) {
             $rootRouter.navigate(['/Schedule'])
         }
-        $scope.data = {
+        console.log(doctorSchedule)
+        $scope.data = doctorSchedule.scheduleone;
 
-            "values": [{
-                    "name": "Sushmita",
-                    "events": [{
-                            "id": "12",
-                            "text": "Event",
-                            "time": "2019-09-09T12:00:00",
-                            "end": "2019-09-10T12:30:00",
-                            "isConfirmed": true
-                        },
-                        {
-                            "id": "13",
-                            "text": "Event",
-                            "time": "2019-09-09T13:00:00",
-                            "end": "2019-09-10T13:30:00",
-                            "isConfirmed": false
-                        }
-                    ]
-                },
-                {
-                    "name": "Pavan",
-                    "events": [{
-                            "id": "13",
-                            "text": "Event",
-                            "time": "2019-09-09T09:00:00",
-                            "end": "2019-09-10T09:30:00",
-                            "isConfirmed": false
-                        },
-                        {
-                            "id": "14",
-                            "text": "Event",
-                            "time": "2019-09-09T11:00:00",
-                            "end": "2019-09-10T11:30:00",
-                            "isConfirmed": true
-                        }
-                    ]
-                },
-                {
-                    "name": "Payal",
-                },
-                {
-                    "name": "Swati Chauhan",
-                    "events": [{
-                            "id": "13",
-                            "text": "Event",
-                            "time": "2019-09-09T09:30:00",
-                            "end": "2019-09-10T09:30:00",
-                            "isConfirmed": false
-                        },
-                        {
-                            "id": "14",
-                            "text": "Event",
-                            "time": "2019-09-09T11:30:00",
-                            "end": "2019-09-10T12:30:00",
-                            "isConfirmed": true
-                        }
-                    ]
-                },
-                {
-                    "name": "Shriram",
-                    "events": [{
-                            "id": "13",
-                            "text": "Event",
-                            "time": "2019-09-09T10:00:00",
-                            "end": "2019-09-10T10:30:00",
-                            "isConfirmed": false
-                        },
-                        {
-                            "id": "14",
-                            "text": "Event",
-                            "time": "2019-09-09T12:30:00",
-                            "end": "2019-09-10T13:00:00",
-                            "isConfirmed": true
-                        }
-                    ]
-                },
-                {
-                    "name": "Vaishnu Dash",
-                    "events": [{
-                            "id": "13",
-                            "text": "Event",
-                            "time": "2019-09-09T13:00:00",
-                            "end": "2019-09-10T13:30:00",
-                            "isConfirmed": false
-                        },
-                        {
-                            "id": "14",
-                            "text": "Event",
-                            "time": "2019-09-09T14:00:00",
-                            "end": "2019-09-10T14:30:00",
-                            "isConfirmed": true
-                        }
-                    ]
-                },
-                {
-                    "name": "Pavan",
-                    "events": [{
-                            "id": "13",
-                            "text": "Event",
-                            "time": "2019-09-09T09:00:00",
-                            "end": "2019-09-10T09:30:00",
-                            "isConfirmed": false
-                        },
-                        {
-                            "id": "14",
-                            "text": "Event",
-                            "time": "2019-09-09T11:00:00",
-                            "end": "2019-09-10T11:30:00",
-                            "isConfirmed": true
-                        }
-                    ]
-                },
-
-            ]
-
-        }
 
         $scope.isAppointementScheduled = function(values, time) {
 
