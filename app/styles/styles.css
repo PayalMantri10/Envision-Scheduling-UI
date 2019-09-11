@@ -319,15 +319,28 @@ a img {
     border-collapse: collapse;
 }
 
-.schedule-table-individual tr,
-.schedule-table-individual td {
-    background: #f0f3f5;
+.schedule-table-individual tr {
+    /* background: #f0f3f5; */
     height: 7vh;
     border: solid 1px gray;
     border-collapse: collapse;
     text-align: center;
 }
 
+.schedule-table-individual td {
+    /* background: #f0f3f5; */
+    height: 7vh;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.weekdayBackground {
+    background: #f0f3f5;
+}
+
 .selectedDayColumn {
     background: white;
+    border-right: solid gray 1px;
+    border-left: solid gray 1px;
+    border-collapse: collapse;
 }
