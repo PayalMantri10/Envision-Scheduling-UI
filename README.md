@@ -1,4 +1,4 @@
-# angularjs-component-router
+# Envision Scheduling UI
 
 An Angular 1.x sample scheduling UI
 
