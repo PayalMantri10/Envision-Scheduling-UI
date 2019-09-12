@@ -42,6 +42,7 @@ gulp.task("assets", () => {
 })
 gulp.task('build', function() {
     return gulp.src([
+            './app/components/app/app.js',
             './app/**/*.js'
         ])
         .pipe(sourcemaps.init())
