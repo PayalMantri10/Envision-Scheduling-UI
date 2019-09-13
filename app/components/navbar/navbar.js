@@ -1,11 +1,18 @@
-angular.module('myApp').component('navBar', {
-    templateUrl: 'components/navbar/navbar.html',
-    controllerAs: 'vm',
-    controller: [function() {
-        var vm = this;
+angular.module('myApp').directive('navBar', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'components/navbar/navbar.html',
+        controller: function() {
+            $(document).ready(function() {
 
-        vm.logout = function() {
-            $rootRouter.navigate(['/Home']);
+                $(function() {
+                    $('li a').click(function(e) {
+                        $('a').removeClass('active');
+                        $(this).addClass('active');
+                    });
+                });
+
+            });
         }
-    }]
+    };
 });

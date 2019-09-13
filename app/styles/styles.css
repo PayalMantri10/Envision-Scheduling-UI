@@ -17,8 +17,48 @@
     height: 50px;
 }
 
+.navbar {
+    border: none;
+    background-color: #3CC9F9;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+}
+
+a img {
+    height: 30px;
+}
+
+.navbar-right {
+    right: 10vh;
+    position: absolute;
+}
+
+#navbarDropdownMenuLink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.active {
+    background: #dad7d7 !important;
+    color: black !important;
+}
+
+.divider-vertical {
+    height: 50px;
+    margin: 0 9px;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #FFF;
+}
+
 .details-container {
     margin-top: 1vh;
+}
+
+.subdetails {
+    color: lightgray
 }
 
 .custom-button {
@@ -34,10 +74,6 @@
     color: white;
 }
 
-.subdetails {
-    color: lightgray
-}
-
 .appointment-detail {
     color: #3CC9F9;
     font-weight: bold;
@@ -45,31 +81,6 @@
 
 .panel-body {
     padding: 1vh
-}
-
-.navbar {
-    border: none;
-    background-color: #3CC9F9;
-    margin: 0;
-}
-
-.navbar:before {
-    display: none
-}
-
-a img {
-    height: 25px;
-}
-
-.divider-vertical {
-    height: 50px;
-    margin: 0 9px;
-    border-left: 1px solid #F2F2F2;
-    border-right: 1px solid #FFF;
-}
-
-.navbar a {
-    color: white;
 }
 
 .alert-bar {
@@ -88,14 +99,6 @@ a img {
     position: relative;
 }
 
-.circleSelector {
-    background: red
-}
-
-.circleSelector:hover {
-    background: blueviolet;
-}
-
 #inner-circle {
     position: absolute;
     background: white;
@@ -112,6 +115,14 @@ a img {
      Offset the position correctly with
      minus half of the width and minus half of the height 
     */
+}
+
+.circleSelector {
+    background: red
+}
+
+.circleSelector:hover {
+    background: blueviolet;
 }
 
 .main-timeline-section {
