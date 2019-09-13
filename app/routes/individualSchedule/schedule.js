@@ -1,6 +1,6 @@
 angular.module('myApp')
 
-.controller('scheduleController', function($scope, $location, individualDoctorSchedule) {
+.controller('scheduleController', function($scope, $location, scheduleService) {
     var vm = this;
     $scope.doctor = {};
     $scope.doctor.name = "Sushmita";
@@ -45,12 +45,15 @@ angular.module('myApp')
         $location.path('/appointment');
     }
 
-    $scope.doctorSchedule = individualDoctorSchedule.doctorone;
+    $scope.doctorDetails = scheduleService.getSelectedDoctorSchedule();
 
 
     $scope.isAppointementScheduled = function(values, time, date) {
         let datetime = date + "T" + time;
-        return (values.findIndex(value => value.time.substring(0, 16) == datetime)) > -1
+        if (values)
+            return (values.findIndex(value => value.time.substring(0, 16) == datetime)) > -1
+        else
+            return false;
     }
 
     $scope.setTimeInterval = function(value) {
