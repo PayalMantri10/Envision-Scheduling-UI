@@ -1,7 +1,7 @@
 angular.module('myApp').directive('navBar', function() {
     return {
         restrict: 'E',
-        templateUrl: 'components/navbar/navbar.html',
+        templateUrl: 'directives/navbar/navbar.html',
         controller: function() {
             $(document).ready(function() {
 

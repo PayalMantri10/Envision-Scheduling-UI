@@ -21,13 +21,13 @@
         <div class="row" style="display:flex;justify-content: space-around">
             <div class="col-md-4" style="display: flex; justify-content: space-around">
                 <div style="font-weight:bold">Staff Available</div>
-                <div class="alert-bar-text">Anathesisologist - {{}}50</div>
-                <div class="alert-bar-text">CRNA - {{}}50</div>
-                <div class="alert-bar-text">Resident - {{}}50</div>
+                <div class="alert-bar-text">Anathesisologist - 50</div>
+                <div class="alert-bar-text">CRNA - 50</div>
+                <div class="alert-bar-text">Resident - 50</div>
             </div>
             <div class="col-md-4" style="display: flex; justify-content: space-around">
                 <div style=" font-weight:bold">Operating Rooms</div>
-                <div class="alert-bar-text">Operation Theatre - {{}}50</div>
+                <div class="alert-bar-text">Operation Theatre - 50</div>
                 <div class="alert-bar-text">Day-Care -3</div>
             </div>
         </div>
@@ -36,25 +36,7 @@
         <div ng-view></div>
     </main>
     <!-- Footer -->
-    <footer class="app-footer">
-        <div class='col-md-4' style="    display: flex;position: absolute;left: 20%;justify-content: space-evenly;height: 5vh; bottom: 0">
-            <div class="col-md-6" style="display:flex">
-                <div id="outer-circle" style="background:red">
-                    <div id="inner-circle">
-                    </div>
-                </div>
-                <div style="font-size: 15px"> &nbsp;&nbsp;Confirmed appointment</div>
-            </div>
-            <div class="col-md-6" style="display:flex">
-                <div id="outer-circle" style="background:blueviolet">
-                    <div id="inner-circle">
-                    </div>
-                </div>
-                <div style="font-size: 15px">&nbsp;&nbsp;Add New Scheduler</div>
-            </div>
-        </div>
-        <!-- </md-toolbar> -->
-    </footer>
+    <custom-footer></custom-footer>
     <script src="dependencies.js"></script>
     <script src="templates.js"></script>
     <script src="bundle.js"></script>
